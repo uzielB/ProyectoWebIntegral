@@ -94,6 +94,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "5e240d49-7375-4593-b380-d62b439ac5ea"
+=======
+    "analytics": "b155c22a-9a23-4f5c-9462-a76c717aaee9"
+>>>>>>> segunda
   }
 }
