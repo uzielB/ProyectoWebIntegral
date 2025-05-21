@@ -7,6 +7,16 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
 export class AppComponent {
   title = 'proyecto4';
+
+  constructor(){
+  console.log('funciones de prueba');
+  console.warn("advertencia");
+  console.log("prueba de conflictos");
 }
+
+}
+
