@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'proyecto4';
+  constructor(){
+    console.log("Nuevas funciones");
+    console.warn("advertencia");
+    console.log("Prueba de conflictos");
+  }
 }
