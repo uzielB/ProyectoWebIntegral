@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -11,4 +12,22 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RegisterComponent { }
+export class RegisterComponent {
+  formRegister!: FormGroup;
+    private fb=inject (FormBuilder);
+    
+    
+  constructor(){
+    this.formRegister = this.fb.group({
+          nombrecom: [],
+          user: [],
+          email: [],
+          password: [],
+          confirmpassword: [],
+          confirmPass:[]
+        })
+  }
+  register(){
+    localStorage.setItem('token', JSON.stringify(this.formRegister.value))
+  }
+ }
